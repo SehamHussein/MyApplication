@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     EditText nameEditText;
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9,
             buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEqual;
-    String text;
+    String text="";
     double number1, number2;
     int privateNumber;
     TextView textView;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nameEditText.setText(nameEditText.getText() + "0");
-                text += nameEditText;
+                text += nameEditText.getText().toString();
                 textView.setText(textView.getText() + text);
             }
         });
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nameEditText.setText(nameEditText.getText() + "1");
-                text += nameEditText;
+                text += nameEditText.getText().toString();
                 textView.setText(textView.getText() + text);
             }
         });
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nameEditText.setText(nameEditText.getText() + "2");
-                text += nameEditText;
+                text += nameEditText.getText().toString();
                 textView.setText(textView.getText() + text);
             }
         });
@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 nameEditText.setText(nameEditText.getText() + "+");
                 number1 = Double.parseDouble(text);
-                text = "";
                 privateNumber = 1;
                 textView.setText(textView.getText() + "+");
+                text = "";
             }
         });
         buttonDiv.setOnClickListener(new View.OnClickListener() {
